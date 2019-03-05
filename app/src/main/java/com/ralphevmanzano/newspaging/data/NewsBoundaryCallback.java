@@ -1,20 +1,14 @@
 package com.ralphevmanzano.newspaging.data;
 
-import android.util.Log;
-
-import com.ralphevmanzano.newspaging.BuildConfig;
 import com.ralphevmanzano.newspaging.api.NewsResponse;
 import com.ralphevmanzano.newspaging.api.NewsService;
 import com.ralphevmanzano.newspaging.db.NewsDatabase;
-import com.ralphevmanzano.newspaging.utils.Keys;
+import com.ralphevmanzano.newspaging.utils.keys.Keys;
 import com.ralphevmanzano.newspaging.utils.PagingRequestHelper;
 import com.ralphevmanzano.newspaging.vo.News;
 
 import org.jetbrains.annotations.NotNull;
-import org.reactivestreams.Subscriber;
-import org.reactivestreams.Subscription;
 
-import java.util.Objects;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -22,10 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.paging.PagedList;
-import io.reactivex.FlowableSubscriber;
-import io.reactivex.Observable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
